@@ -10,8 +10,7 @@ var User = require('../model/usermodel');
 
 router.post('/register', function(req, res, next) {
   console.log('req.body', req.body)
-  ref.createUser(req.body, function(err, userData) {
-    if(err) return res.status(400).send(err);
+
     var description= req.body.uid
     var date = req.body.date
    
@@ -19,7 +18,6 @@ router.post('/register', function(req, res, next) {
    if(err) return res.status(400).send(err);
       res.send();
     });
-  });
 });
 
 

@@ -17,7 +17,7 @@ app.controller('listCtrl',["$scope", "$http", function($scope, $http) {
   	console.log('Your in listCtrl')
 
 
-  $scope.addSymbol = function(){
+  $scope.addClick = function(){
     var description = $scope.myTask
     var date= $scope.myDate
     
@@ -31,5 +31,5 @@ app.controller('listCtrl',["$scope", "$http", function($scope, $http) {
 	  //console.log(index);
 	  Stocks.deleteFromAray(index)
 	}
-});
+}]);
 

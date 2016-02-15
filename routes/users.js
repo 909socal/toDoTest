@@ -1,6 +1,6 @@
 'use strict';
 
-var Firebase = require('firebase');
+var mongoose = require('mongoose');
 var express = require('express');
 var router = express.Router();
 
@@ -14,7 +14,7 @@ router.post('/register', function(req, res, next) {
     var description= req.body.uid
     var date = req.body.date
    
- User.create({description: description, date: date},  function(err, newUser) {
+ User.save({description: description, date: date},  function(err, newUser) {
    if(err) return res.status(400).send(err);
       res.send();
     });

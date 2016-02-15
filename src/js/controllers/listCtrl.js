@@ -20,12 +20,12 @@ app.controller('listCtrl',["$scope", "$http", function($scope, $http) {
 	  //console.log(index);
 	  Stocks.deleteFromAray(index)
 	}
-  
-   $http.get('/users/all')
+
+  $http.get('/users/all')
   .then(function(usersAll){
     console.log('usersAll', usersAll)
-    $scope.users = usersAll
-    console.log("users", $scope.users[1])
+    $scope.users = usersAll.data
+    console.log("users data", $scope.users)
   })
 }]);
 

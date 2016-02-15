@@ -20,8 +20,7 @@
           <th class = 'delete'> Delete</th>
         </tr>
       </thead>
-      <tbody id= 'bigBoy'>
-        <tr id ='template'>
+      <tbody id= 'bigBoy' ng-repeat="task in tasks">
           <td>{{task.des}}</td>
           <td>{{task.date}}</td>
           <td class = 'tcheckbox'>

@@ -2,7 +2,9 @@
 
 var mongoose = require('mongoose');
 
-var taskSchema = new mongoose.Schema({
+var tasksSchema = new mongoose.Schema({
   description: {type:String},
   date: {type:String}
 });
+
+var User = mongoose.model('Tasks', taskSchema);

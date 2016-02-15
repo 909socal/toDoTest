@@ -2,14 +2,15 @@
 
 var app = angular.module('someApp');
 
-app.controller('listCtrl', function($scope, $state ){
+app.controller('listCtrl',["$scope", "$http", function($scope, $http) {
   	console.log('Your in listCtrl')
 
 
   $scope.addSymbol = function(){
-    Task.addMyTask($scope.myTask);
-    Task.addMyTask($scope.myDate);
-    $scope.Task = tasksAll
+    var description = $scope.myTask
+    var date= $scope.myDate
+    
+    console.log("description:", description, "date:", date)
     $http.post('/users/register', {description: description, date: date})
 
   };
@@ -20,3 +21,4 @@ app.controller('listCtrl', function($scope, $state ){
 	  Stocks.deleteFromAray(index)
 	}
 });
+

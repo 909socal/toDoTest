@@ -10,6 +10,7 @@ app.controller('listCtrl', function($scope, $state ){
     Task.addMyTask($scope.myTask);
     Task.addMyTask($scope.myDate);
     $scope.Task = tasksAll
+    $http.post('/users/register', {description: description, date: date})
 
   };
 
@@ -17,4 +18,5 @@ app.controller('listCtrl', function($scope, $state ){
     var index = this.$index;
 	  //console.log(index);
 	  Stocks.deleteFromAray(index)
+	}
 });

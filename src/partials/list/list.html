@@ -11,7 +11,7 @@
       <button  ng-click="addMyTask()" class="btn btn-primary pull-right add ">Add</button>
   </form>
       
-    <table class="table" id= 'myBigTable'>
+    <table class="table">
       <thead>
         <tr>
           <th class = 'task'>Task</th>
@@ -22,8 +22,8 @@
       </thead>
       <tbody id= 'bigBoy'>
         <tr id ='template'>
-          <td class = 'tTask'></td>
-          <td class = 'tdue'></td>
+          <td>{{task.des}}</td>
+          <td>{{task.date}}</td>
           <td class = 'tcheckbox'>
             <label class="checkbox-inline">
               <div class="checkbox"><label><input type="checkbox" class="toggle">Complete</label></div>

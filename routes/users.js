@@ -11,10 +11,10 @@ var User = require('../model/usermodel');
 router.post('/register', function(req, res, next) {
   console.log('req.body', req.body)
 
-    var description= req.body.uid
+    var description= req.body.description
     var date = req.body.date
    
- User.save({description: description, date: date},  function(err, newUser) {
+ User.create({description: description, date: date},  function(err, newUser) {
    if(err) return res.status(400).send(err);
       res.send();
     });

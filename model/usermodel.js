@@ -2,17 +2,13 @@
 
 var mongoose = require('mongoose');
 
-
 var User;
 
-var userSchema = mongoose.Schema({
-  task: {type: String, required:true},
-  date: {type: Date, required:true},
-  complete: {type: String, required:true}
+var userSchema = new mongoose.Schema({
+  description: {type:String},
+  date: {type:String}
 
 });
-
-
 
 User = mongoose.model('User', userSchema);
 

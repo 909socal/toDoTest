@@ -8,6 +8,12 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/mean-stack-test';
+var mongoose = require('mongoose');
+mongoose.connect(mongoUrl, function(err) {
+  console.log(err || `Connected to MongoDB: ${mongoUrl}`);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

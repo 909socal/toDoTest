@@ -13,12 +13,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 var app = angular.module('someApp');
 
-app.controller('listCtrl', function($scope, $state, Task){
+app.controller('listCtrl', function($scope, $state, ){
   	console.log('Your in listCtrl')
 
 
   $scope.addSymbol = function(){
-    Stocks.addMyTask ($scope.myTask);
+    Task.addMyTask($scope.myTask);
+    Task.addMyTask($scope.myDate);
   };
 
 });
